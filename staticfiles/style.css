@@ -1,0 +1,169 @@
+ body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #fff;
+      scroll-behavior: smooth;
+      transition: background 0.5s ease-in-out;
+    }
+    .main {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .hedder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000; /* adjust as needed */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .paragraph {
+      font-size: 20px;
+      color: #f9ca24;
+    }
+    .menu {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .home {
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #f9ca24;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .home:hover {
+      background-color: #f9ca24;
+      color: #000;
+      transform: scale(1.1);
+    }
+    .homepage {
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .intro {
+      flex: 1;
+      animation: fadeInLeft 1s ease forwards;
+    }
+    .intro .title {
+      font-size: 40px;
+      color: #f9ca24;
+      margin-bottom: 20px;
+    }
+    .intro p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .Image {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(249, 202, 36, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInRight 1s ease forwards;
+      object-fit: cover;
+    }
+    .Image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
+    }
+    @keyframes fadeInLeft {
+      0% { opacity: 0; transform: translateX(-50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInRight {
+      0% { opacity: 0; transform: translateX(50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    .highlight {
+      background: #f9ca24;
+      color: #000;
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+    .section {
+      padding: 60px 20px;
+      border-top: 1px solid #444;
+    }
+    .section h2 {
+      color: #f9ca24;
+      margin-bottom: 20px;
+      font-size: 32px;
+      text-align: center;
+    }
+    .section ul, .section .projects-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .section li, .projects-list div {
+      background-color: #1c1c1c;
+      padding: 20px;
+      border-left: 5px solid #f9ca24;
+      box-shadow: 0 0 20px rgba(213, 220, 7, 0.7);
+      border-radius: 10px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .skills-list span {
+      background-color: #1c1c1c;
+      border: 1px solid #f9ca24;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .skills-list span:hover {
+      transform: scale(1.05);
+      background-color: #f9ca24;
+      color: #000;
+    }
+    .contact-section a {
+      color: #f9ca24;
+      text-decoration: none;
+      margin-top: 80px;
+    }
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #f9ca24;
+      color: #000;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .download-btn:hover {
+      background-color: #ffe100;
+    }

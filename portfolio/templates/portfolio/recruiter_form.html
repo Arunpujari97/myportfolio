@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head><title>Recruiter Info</title>
+<link rel="stylesheet" href="{% static 'css/recruiter-info.css' %}">
+</head>
+<body>
+ <div class="recruiter-form-container">
+  <h2>Enter Recruiter Information</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</body>
+</html>

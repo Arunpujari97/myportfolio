@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home | Arunkumar K H{% endblock %}
+{% block content %}
+<div class="main">
+  <div class="hedder">
+    <p class="paragraph">Hello {{ recruiter |default:'Guest' }} welcome to My Portfolio</p>
+    <div class="menu">
+      <a href="#" class="home">Home</a>
+      <a href="#education" class="home">Education</a>
+      <a href="#skills" class="home">Skills</a>
+      <a href="#projects" class="home">Projects</a>
+      <a href="#certificates" class="home">Certificates</a>
+      <a href="#contact" class="home">Contact</a>
+    </div>
+  </div>
+
+  <div class="homepage">
+    <div class="intro">
+      <p class="title">👋 Hi, I'm <span class="highlight">Arunkumar K H</span></p>
+      <p>A passionate <span class="highlight">Full Stack Web Developer</span> specializing in Python & Django. I craft responsive websites, solve real-world problems with clean code, and continuously strive to grow in the tech industry.</p>
+        <p>With experience in backend and frontend, I bring strong technical and creative problem-solving skills to every project I work on.</p>
+      {% if is_recruiter %}
+        <a class="download-btn" href="{% static 'docs/resume.pdf' %}" download>📄 Download Resume</a>
+      {% endif %}
+    </div>
+    <div class="Image">
+    <img src="{% static 'img/profile.jpg' %}" alt="My photo" class="Image">
+    </div>
+  </div>
+
+  <div class="section" id="education">
+    <h2>🎓 Education</h2>
+    <ul>
+      <li><strong>B.E. in Information Science</strong> - Sir MVIT, Bangalore (2023-2025)<br>CGPA: 8.1/10<br>
+        {% if is_recruiter %}<br><a class="download-btn" href="{% static 'docs/be-marksheet.pdf' %}" download>Download Marksheet</a>{% endif %}
+      </li>
+      <li><strong>Diploma in CSE</strong> - Govt Polytechnic, Chitradurga (2020-2023)<br>Percentage: 75.6%<br>
+        {% if is_recruiter %}<br><a class="download-btn" href="{% static 'docs/diploma-marksheet.pdf' %}" download>Download Marksheet</a>{% endif %}
+      </li>
+      <li><strong>SSLC</strong> - Govt High School, Hosur (2018-2019)<br>Percentage: 66.4%<br>
+        {% if is_recruiter %}<br><a class="download-btn" href="{% static 'docs/sslc-marksheet.pdf' %}" download>Download Marksheet</a>{% endif %}
+      </li>
+    </ul>
+  </div>
+
+  <div class="section" id="skills">
+    <h2>🛠 Skills</h2>
+    <div class="skills-list">
+      <span>HTML</span><span>CSS</span><span>Python</span><span>Django</span><span>Pandas</span><span>MySQL</span><span>C</span>
+    </div>
+  </div>
+
+  <div class="section" id="projects">
+    <h2>💻 Projects</h2>
+    <div class="projects-list">
+        <div><strong>Smart Agriculture Monitoring System</strong><br> Offline IoT system that monitors humidity, temperature, motion, and sends motor on/off alerts. Solar-powered and non-IoT-based. <br><strong>Tech Used:</strong> Python, Sensors, Embedded C</div>
+        <div><strong>Online Jobseeker Portal</strong><br> Dynamic portal with role-based login for jobseekers and recruiters. Includes resume upload, job search, and admin control panel.<br><strong>Tech Used:</strong> HTML, CSS, PHP, MySQL</div>
+        <div><strong>Online Election Voting System</strong><br> Offline simulation of secure voting system with role-based access. Voter verification, admin dashboard, and result analysis.<br><strong>Tech Used:</strong> PHP, MySQL, CSS</div>
+      </div>
+  </div>
+
+  <div class="section" id="certificates">
+    <h2>📜 Certificates</h2>
+    <ul>
+      <li><strong>Python developer intern</strong> - Advi group of companies 
+        {% if is_recruiter %}<br><a class="download-btn" href="{% static 'docs/advicirtificate.pdf' %}" download>Download Certificate</a>{% endif %}
+      </li>
+      <li><strong>Ai Machine Learning Engineer</strong> - Skill India
+        {% if is_recruiter %}<br><a class="download-btn" href="{% static 'docs/aiml.pdf' %}" download>Download Certificate</a>{% endif %}
+      </li>
+      <li><strong>Introduction to Microsoft Excel</strong> - Coursera 
+        {% if is_recruiter %}<br><a class="download-btn" href="{% static 'docs/excel cirtificate.pdf' %}" download>Download Certificate</a>{% endif %}
+      </li>
+      <li><strong> Python </strong> - SkillDzire
+        {% if is_recruiter %}<br><a class="download-btn" href="{% static 'docs/skill_dezire.pdf' %}" download>Download Certificate</a>{% endif %}
+      </li>
+       <li><strong> 100 Days of code: A Challenging Complete python pro Bootcamp </strong> - Coursera 
+        {% if is_recruiter %}<br><a class="download-btn" href="{% static 'docs/udemy_cirtificate.pdf' %}" download>Download Certificate</a>{% endif %}
+      </li> 
+      <li><strong>Python for Everybody</strong> - Coursera
+        {% if is_recruiter %}<br><a class="download-btn" href="{% static 'docs/everyday_cirtificate.pdf' %}" download>Download Certificate</a>{% endif %}
+      </li>
+    </ul>
+  </div>
+
+  <div class="section contact-section" id="contact">
+    <h2>📞 Contact Me</h2>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:arunkumarkh.66@gmail.com">arunkumarkh.66@gmail.com</a></li>
+      <li><strong>Phone:</strong> +91-7676053097</li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arunkumar-k-h-ba385223b" target="_blank">linkedin.com/in/arunkumar</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/Arunpujari97" target="_blank">github.com/arunkumar</a></li>
+      <li><strong>Location:</strong> Bengaluru, Karnataka, India</li>
+      <li><strong>Availability:</strong> Open to Work | Collaborations | <strong>Open to Relocate</strong></li>
+      <li><strong>Languages:</strong> English (Fluent), Kannada (Native), Hindi (Beginner)</li>
+      <li>Feel free to connect for opportunities, feedback, or just a friendly chat! 😊</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

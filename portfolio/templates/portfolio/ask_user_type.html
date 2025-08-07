@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head><title>Welcome</title>
+<link rel="stylesheet" href="{% static 'css/ask-type.css' %}">
+</head>
+<body>  
+ <div class="ask-type-container">
+  <div class="ask-type-box">
+    <h2>Are you a Viewer or a Recruiter?</h2>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" name="user_type" value="viewer">Viewer</button>
+      <button type="submit" name="user_type" value="recruiter">Recruiter</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
