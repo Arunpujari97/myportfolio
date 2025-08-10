@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-d)27sk)oq5n172kmiyz6j_kn^^tmx7=@v#80g!z_sybqxzjbys
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['myportfolio-z12u.onrender.com','https://myportfolio-z12u.onrender.com','www.myportfolio-z12u.onrender.com']
+ALLOWED_HOSTS = os.environ.get(
+    "DJANGO_ALLOWED_HOSTS",
+    "localhost,127.0.0.1"
+).split(",")
 
 
 # Application definition
